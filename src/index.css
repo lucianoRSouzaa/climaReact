@@ -20,3 +20,24 @@ header div.icons{
   right: 25px;
   top: 30px;
 }
+
+section.main{
+  width: 40%;
+  margin: 0 auto;
+}
+
+section.main label{
+  font-weight: bold;
+  font-size: 13px;
+  margin-top: 20px;
+}
+
+section.main input{
+  outline: none;
+  border-width: 3px;
+}
+
+section.main input:focus{
+  box-shadow: none;
+  border: 3px solid #dee2e6;
+}
