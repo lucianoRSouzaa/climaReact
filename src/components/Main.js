@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 
 import Weather from './Weather';
+import WeatherWeek from './WeatherWeek';
 
 
 export default function Main() {
@@ -47,6 +48,8 @@ export default function Main() {
         </div>
 
         {weatherData && weatherDataNow && <Weather weatherData={weatherData} tempNow={weatherDataNow} />}
+
+        {weatherData && weatherDataNow && <WeatherWeek weatherData={weatherData} />}
     </section>
   );
 }
