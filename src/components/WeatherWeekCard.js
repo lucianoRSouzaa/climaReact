@@ -7,11 +7,15 @@ const WeatherCard = ({ data }) => {
     const diaSemana = format(formattedDate, 'eee', { locale: pt });
   
     return (
-      <div className="weather-card">
-        <h3>{diaSemana}</h3>
-        <WeatherIcon iconCode={data.weather.icon} />
-        <p>Temp. Máxima: {data.max_temp}&deg;C</p>
-        <p>Temp. Mínima: {data.min_temp}&deg;C</p>
+      <div className="d-flex flex-column align-items-center flex-fill weather-card">
+        <p>{diaSemana}</p>
+        <div className="border-right d-flex flex-column align-items-center w-100 pt-2">
+            <WeatherIcon iconCode={data.weather.icon} />
+            <div className="d-flex flex-column">
+                <span className="pt-3">{Math.round(data.max_temp)}&deg;C</span>
+                <span>{Math.round(data.min_temp)}&deg;C</span>
+            </div>
+        </div>
       </div>
     );
 };
