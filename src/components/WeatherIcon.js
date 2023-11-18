@@ -1,33 +1,32 @@
 import React from 'react';
-import { MdWbSunny } from 'react-icons/md';
 import { FaMoon } from "react-icons/fa6";
-import { WiDayCloudy, WiDayRain, WiNightAltRain, WiDayThunderstorm, WiNightThunderstorm } from "react-icons/wi";
-import { BsCloudMoon, BsCloudFill, BsFillCloudsFill, BsCloudRainFill  } from "react-icons/bs";
+import { WiDayRain, WiNightAltRain, WiDayThunderstorm, WiNightThunderstorm } from "react-icons/wi";
+import { BsSunFill, BsCloudMoonFill, BsCloudFill, BsFillCloudsFill, BsCloudRainFill, BsCloudSunFill } from "react-icons/bs";
 
 const WeatherIcon = ({ iconCode }) => {
     switch (iconCode) {
         case '01d':
         case 'c01d':
-            return <MdWbSunny />;
+            return <BsSunFill className="icon icon-sunny" />;
         case '01n':
         case 'c01n':
-            return <FaMoon />;
+            return <FaMoon className="icon icon-moon" />;
         case '02d':
         case 'c02d':
-            return <WiDayCloudy />;
+            return <BsCloudSunFill  className="icon icon-cloudy-day" />;
         case '02n':
         case 'c02n':
-            return <BsCloudMoon />;
+            return <BsCloudMoonFill  className="icon icon-cloudy-moon" />;
         case '03d':
         case '03n':
-            return <BsCloudFill />;
+            return <BsCloudFill className="icon icon-cloudy-fill" />;
         case '04d':
         case '04n':
         case 'c03d':
         case 'c03n':
         case 'c04d':
         case 'c04n':
-            return <BsFillCloudsFill />;
+            return <BsFillCloudsFill className="icon icon-double-clouds-fill" />;
         case '09d':
         case '09n':
         case 'u00d':
@@ -53,34 +52,34 @@ const WeatherIcon = ({ iconCode }) => {
         case 'd02n':
         case 'd01d':
         case 'd01n':
-            return <BsCloudRainFill />;
+            return <BsCloudRainFill className="icon icon-rain" />;
         case '10d':
         case 's01d':
         case 's04d':
         case 'r05d':
-            return <WiDayRain  />;
+            return <WiDayRain className="icon icon-rain-day" />;
         case '10n':
         case 's01n':
         case 's04n':
         case 'r06n':
         case 'r04n':
-            return <WiNightAltRain  />;
+            return <WiNightAltRain className="icon icon-rain-night" />;
         case '11d':
         case 't01d':
         case 't02d':
         case 't03d':
         case 't04d':
         case 't05d':
-            return <WiDayThunderstorm  />;
+            return <WiDayThunderstorm className="icon icon-thunderstorm-day" />;
         case '11n':
         case 't01n':
         case 't02n':
         case 't03n':
         case 't04n':
         case 't05n':
-            return <WiNightThunderstorm  />;
+            return <WiNightThunderstorm className="icon icon-thunderstorm-nigth" />;
         default:
-            return <MdWbSunny />;
+            return <BsSunFill className="icon icon-sunny" />;
     }
 };
 

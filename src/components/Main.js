@@ -37,14 +37,16 @@ export default function Main() {
     }
 
   return (
-    <section className="main">
-        <label>Cidade</label>
-        <div className="d-flex gap-2">
-            <input className="form-control shadow-sm" type="text" placeholder="Digite o nome da cidade" onChange={(e) => setCity(e.target.value)} />
-            <button className="btn btn-primary" onClick={searchWeather}>Buscar</button>
+    <section className="section-main">
+        <div className="div-main">
+            <label>Cidade</label>
+            <div className="d-flex gap-2">
+                <input className="form-control shadow-sm" type="text" placeholder="Digite o nome da cidade" onChange={(e) => setCity(e.target.value)} />
+                <button className="btn btn-primary" onClick={searchWeather}>Buscar</button>
+            </div>
         </div>
 
-        {weatherData && <Weather weatherData={weatherData} tempNow={weatherDataNow} />}
+        {weatherData && weatherDataNow && <Weather weatherData={weatherData} tempNow={weatherDataNow} />}
     </section>
   );
 }

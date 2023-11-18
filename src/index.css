@@ -4,10 +4,9 @@
   font-family: 'Montserrat', Arial, Helvetica, sans-serif;
 }
 
-
 main {
-  height: 100vh;
   width: 100vw;
+  background-color: #f7f9fa;
 }
 
 header{
@@ -21,23 +20,113 @@ header div.icons{
   top: 30px;
 }
 
-section.main{
+.section-main .div-main{
   width: 40%;
   margin: 0 auto;
 }
 
-section.main label{
+.section-main .div-main label{
   font-weight: bold;
   font-size: 13px;
   margin-top: 20px;
 }
 
-section.main input{
+.section-main .div-main input{
   outline: none;
   border-width: 3px;
 }
 
-section.main input:focus{
+.section-main .div-main input:focus{
   box-shadow: none;
   border: 3px solid #dee2e6;
+}
+
+.section-main .box-weather-now{
+  width: 80%;
+  margin: 0 auto;
+  border: 2px solid #cecece;
+  background-color: #fff;
+  padding-top: 1.65rem;
+}
+
+.box-weather-now .col-conditions{
+  width: 40%;
+}
+
+.box-weather-now .col-temp-now{
+  width: 24%;
+}
+
+.box-weather-now .col-icon{
+  width: 36%;
+}
+
+.box-weather-now p{
+  color: #2c3b47;
+  font-size: 1.2rem;
+  margin: 0;
+}
+
+.box-weather-now .city-name{
+  font-size: 1.8rem;
+  font-weight: 500;
+}
+
+.box-weather-now .div-data-now{
+  border-right: 2px solid #cecece;
+  display: inline-block;
+  padding-right: 33px;
+}
+
+.box-weather-now .div-data-now p{
+  margin-bottom: 3px;
+}
+
+.box-weather-now .div-data-now .icon-temp{
+  width: 22px;
+  margin-right: 3px;
+}
+
+.box-weather-now .div-data-now .icon-humidity{
+  width: 26px;
+  height: 26px;
+}
+
+.box-weather-now .temp-now{
+  font-size: 4.5rem;
+  line-height: 1.1;
+}
+
+.box-weather-now .condition-now{
+  font-size: 2rem;
+}
+
+.box-weather-now  .col-icon .icon{
+  height: 75%;
+  width: 75%;
+  margin-left: 40px;
+}
+
+.icon-sunny{
+  color: #f3ba10;
+}
+
+.icon-rain-day, .icon-thunderstorm-day{
+  color: #8b3800;
+}
+
+.icon-cloudy-day{
+  color: #ac6363;
+}
+
+.icon-double-clouds-fill, .icon-cloudy-fill{
+  color: #999999;
+}
+
+.icon-moon, .icon-cloudy-moon, .icon-rain-night, .icon-thunderstorm-nigth{
+  color: #103556;
+}
+
+.icon-rain{
+  color: #2c88d9;
 }
