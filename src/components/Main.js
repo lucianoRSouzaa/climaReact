@@ -7,7 +7,6 @@ export default function Main() {
     // declaração das variáveis
     const [weatherData, setWeatherData] = useState(null);
     const [weatherDataNow, setWeatherDataNow] = useState(null);
-    const [iconWeatherNow, setIconWeatherNow] = useState('');
     const [city, setCity] = useState('');
     const [apiKey] = useState('f10175fd866847518fbe2c603425902b');
     const [apiKey2] = useState('b44df372b4a8f835767dc76a901dcd99');

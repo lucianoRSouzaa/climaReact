@@ -1,5 +1,6 @@
 import { format } from 'date-fns';
 import { pt } from 'date-fns/locale';
+import WeatherIcon from './WeatherIcon';
 
 export default function Weather(props) {
 
@@ -13,9 +14,12 @@ export default function Weather(props) {
     const weatherData = props.weatherData;
     const tempNow = props.tempNow;
     const currentDate = getCurrentDate();
+    console.log(tempNow)
     
     return (
       <div>
+        <WeatherIcon iconCode={tempNow.weather[0].icon} />
+
         <h3>{weatherData.city_name}, {weatherData.country_code}</h3>
         <p>Máxima: {Math.round(weatherData.data[0].app_max_temp)}&deg;C</p>
         <p>Miníma: {Math.round(weatherData.data[0].app_min_temp)}&deg;C</p>
