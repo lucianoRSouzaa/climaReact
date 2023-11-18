@@ -131,6 +131,15 @@ header div.icons{
   font-size: 1.1rem;
 }
 
+footer > p{
+  margin-bottom: 2px;
+}
+
+footer p{
+  color: #2c3b47;
+  font-size: 1.2rem;
+}
+
 .icon-sunny{
   color: #f3ba10;
 }
