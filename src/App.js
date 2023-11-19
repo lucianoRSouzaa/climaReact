@@ -2,16 +2,17 @@ import './index.css'
 
 import Header from './components/Header'
 import Main from './components/Main'
-import Footer from './components/Footer'
+import { ThemeProvider } from './components/Theme/ThemeProvider';
 
 
 function App() {
   return (
-    <main>
-      <Header />
-      <Main />
-      <Footer />
-    </main>
+    <ThemeProvider>
+      <main>
+        <Header />
+        <Main />
+      </main>
+    </ThemeProvider>
   );
 }
 

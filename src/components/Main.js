@@ -2,10 +2,14 @@ import React, { useState } from 'react';
 
 import Weather from './Weather';
 import WeatherWeek from './WeatherWeek';
+import Footer from './Footer'
+import { useTheme } from './Theme/ThemeContext';
 
 
 export default function Main() {
     // declaração das variáveis
+    const { theme } = useTheme();
+
     const [weatherData, setWeatherData] = useState(null);
     const [weatherDataNow, setWeatherDataNow] = useState(null);
     const [city, setCity] = useState('');
@@ -38,7 +42,7 @@ export default function Main() {
     }
 
   return (
-    <section className="section-main">
+    <section className={`section-main ${weatherData ? '' : 'full-screen'} ${theme === 'dark' ? 'dark' : ''}`}>
         <div className="div-main">
             <label>Cidade</label>
             <div className="d-flex gap-2">
@@ -50,6 +54,8 @@ export default function Main() {
         {weatherData && weatherDataNow && <Weather weatherData={weatherData} tempNow={weatherDataNow} />}
 
         {weatherData && weatherDataNow && <WeatherWeek weatherData={weatherData} />}
+
+        {weatherData && weatherDataNow && <Footer />}
     </section>
   );
 }

@@ -1,7 +1,7 @@
 import React from 'react';
-import { FaMoon } from "react-icons/fa6";
+import { FaMoon, FaCloud } from "react-icons/fa6";
 import { WiDayRain, WiNightAltRain, WiDayThunderstorm, WiNightThunderstorm } from "react-icons/wi";
-import { BsSunFill, BsCloudMoonFill, BsCloudFill, BsFillCloudsFill, BsCloudRainFill, BsCloudSunFill } from "react-icons/bs";
+import { BsSunFill, BsCloudMoonFill, BsFillCloudsFill, BsCloudRainFill, BsCloudSunFill } from "react-icons/bs";
 
 const WeatherIcon = ({ iconCode }) => {
     switch (iconCode) {
@@ -19,7 +19,7 @@ const WeatherIcon = ({ iconCode }) => {
             return <BsCloudMoonFill  className="icon icon-cloudy-moon" />;
         case '03d':
         case '03n':
-            return <BsCloudFill className="icon icon-cloudy-fill" />;
+            return <FaCloud className="icon icon-cloudy-fill" />;
         case '04d':
         case '04n':
         case 'c03d':

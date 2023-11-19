@@ -13,10 +13,30 @@ header{
   padding: 20px;
 }
 
+header.dark{
+  background: #120f32;
+  color: #bcbbcb;
+}
+
 header div.icons{
   position: absolute;
   right: 25px;
   top: 30px;
+}
+
+.section-main.full-screen{
+  height: 90vh;
+}
+
+@media (max-height: 736px) {
+  .section-main.full-screen{
+    height: 84.1vh;
+  }
+}
+
+.section-main.dark{
+  background: #120f32;
+  color: #bcbbcb;
 }
 
 .section-main .div-main{
@@ -30,14 +50,42 @@ header div.icons{
   margin-top: 20px;
 }
 
+.section-main.dark .div-main label{
+  color: #403d64;
+}
+
 .section-main .div-main input{
   outline: none;
   border-width: 3px;
 }
 
+.section-main .div-main input::placeholder{
+  color: #a5a4b1;
+}
+
+.section-main .div-main input::placeholder{
+  color: #524f74;
+}
+
+.section-main.dark .div-main input{
+  border-color: #403d64;
+  background-color: #120f32;
+  color: #a5a4b1;
+}
+
 .section-main .div-main input:focus{
   box-shadow: none;
   border: 3px solid #dee2e6;
+}
+
+.section-main.dark .div-main input:focus{
+  box-shadow: none;
+  border: 3px solid #403d64;
+}
+
+.section-main.dark .div-main .btn-primary{
+  background-color: #282174;
+  border-color: #211c61;
 }
 
 .section-main .box-weather-now, .section-main .weather-week-section{
@@ -46,6 +94,11 @@ header div.icons{
   border: 2px solid #cecece;
   background-color: #fff;
   padding-top: 1.65rem;
+}
+
+.section-main.dark .box-weather-now, .section-main.dark .weather-week-section{
+  border-color: #a7a1eb;
+  background-color: #4c3be6;
 }
 
 .section-main .weather-week-section{
@@ -69,6 +122,10 @@ header div.icons{
   color: #2c3b47;
   font-size: 1.2rem;
   margin: 0;
+}
+
+.section-main.dark .box-weather-now p{
+  color: #cecece;
 }
 
 .box-weather-now .city-name{
@@ -117,6 +174,10 @@ header div.icons{
   font-size: 1.25rem;
 }
 
+.section-main.dark .weather-week-section .weather-card p{
+  color: #cecece;
+}
+
 .weather-week-section .weather-card .icon{
   width: 50%;
   height: 50%;
@@ -131,6 +192,10 @@ header div.icons{
   font-size: 1.1rem;
 }
 
+.section-main.dark .weather-week-section .weather-card span{
+  color: #cecece;
+}
+
 footer > p{
   margin-bottom: 2px;
 }
@@ -138,6 +203,10 @@ footer > p{
 footer p{
   color: #2c3b47;
   font-size: 1.2rem;
+}
+
+.section-main.dark footer p{
+  color: #cecece;
 }
 
 .icon-sunny{
@@ -148,16 +217,32 @@ footer p{
   color: #8b3800;
 }
 
+.section-main.dark .icon-rain-day{
+  color: #790e00;
+}
+
 .icon-thunderstorm-day{
   color: #4b4b4b;
+}
+
+.section-main.dark .icon-thunderstorm-day{
+  color: #b4b4b4;
 }
 
 .icon-cloudy-day{
   color: #ac6363;
 }
 
+.section-main.dark .icon-cloudy-day{
+  color: #db9942;
+}
+
 .icon-double-clouds-fill, .icon-cloudy-fill{
   color: #999999;
+}
+
+.section-main.dark .icon-double-clouds-fill, .section-main.dark .icon-cloudy-fill{
+  color: #b3b3b3;
 }
 
 .icon-moon, .icon-cloudy-moon, .icon-rain-night, .icon-thunderstorm-nigth{
@@ -166,4 +251,71 @@ footer p{
 
 .icon-rain{
   color: #2c88d9;
+}
+
+/* toggle theme button */
+.checkbox {
+  opacity: 0;
+}
+
+.label {
+  background-color: #111;
+  border-radius: 50px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 5px;
+  position: relative;
+  height: 22.5px;
+  width: 50px;
+  transform: scale(1.28);
+  margin-right: 32px;
+}
+
+header.dark .label{
+  background-color: #194f80;
+}
+
+.label .ball {
+  background-color: #fff;
+  border-radius: 50%;
+  position: absolute;
+  top: 1.5px;
+  left: 2px;
+  height: 19px;
+  width: 19px;
+  transform: translateX(0px);
+  transition: transform 0.2s linear;
+}
+
+header.dark .label .ball {
+  background-color: #cecece;
+}
+
+.checkbox:checked + .label .ball {
+  transform: translateX(27px);
+}
+
+.link-gitHub{
+  text-decoration: none;
+  color: #2c3b47;
+}
+
+header.dark .link-gitHub{
+  color: #cecece;
+}
+ 
+.icon-gitHub{
+  height: 28px;
+  width: 28px;
+}
+
+.icon-moon-theme {
+  color: #f1c40f;
+}
+
+.icon-sun-theme {
+  color: #f39c12;
 }
